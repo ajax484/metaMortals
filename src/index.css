@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "morris-roman";
+    font-display: swap;
+    src: url('./Assets/Fonts/MorrisRomanBlack.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    @apply font-morrisRoman;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3fr, 1fr);
+    grid-row: 3fr;
+}
+
+.gradient-background {
+    background: rgb(250, 227, 116);
+    background: linear-gradient(0deg, rgba(250, 227, 116, 1) 0%, rgba(226, 193, 80, 1) 4.65%, rgba(190, 160, 72, 1) 11.98%, rgba(118, 82, 36, 1) 22.4%, rgba(250, 227, 116, 1) 33.85%, rgba(226, 193, 80, 1) 42.19%, rgba(190, 160, 72, 1) 51.56%, rgba(118, 82, 36, 1) 60.42%, rgba(250, 227, 116, 1) 75.52%, rgba(226, 193, 80, 1) 83.33%, rgba(190, 160, 72, 1) 89.06%, rgba(118, 82, 36, 1) 100%);
+    @apply rounded-lg;
+}
+
+.gradient-body {
+    background: rgb(118, 82, 36);
+    background: linear-gradient(0deg, rgba(118, 82, 36, 1) 0%, rgba(190, 160, 72, 1) 47.4%, rgba(118, 82, 36, 1) 100%);
+    @apply rounded-lg;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
