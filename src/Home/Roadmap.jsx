@@ -3,22 +3,22 @@ import { pillars1, pillars2, scroll } from '../Assets/Img'
 
 export default function Roadmap() {
     return (
-        <section className="relative h-screen bg-gray-800">
+        <section className="relative bg-gray-800">
             <img src={pillars1} className="h-full absolute left-0" alt="" />
             <img src={pillars2} className="h-full absolute right-0" alt="" />
 
-            <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white space-y-8">
+            <div className="text-white space-y-8 py-16 z-10 relative">
                 <h2 className="text-2xl md:text-5xl text-center">
                     Metamortals: Our Roadmap
                 </h2>
 
-                {/* <div className="overflow-x-scroll overflow-y-auto no-scrollbar text-black">
-                    <div className="flex gap-x-16">
-                        <div className="h-[400px] w-[700px] relative">
+                <div className="overflow-x-scroll overflow-y-auto no-scrollbar text-black max-w-full">
+                    <div className="flex flex-col items-center md:items-start md:flex-row gap-y-8 md:gap-y-0 md:gap-x-16 w-full md:w-max">
+                        <div className="h-[400px] w-[400px] md:h-[400px] md:w-[700px] relative">
                             <img src={scroll} className="w-full h-full" alt="" />
                             <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 space-y-4">
-                                <h3 className="text-4xl text-center">Phase 1</h3>
-                                <ul className="list-disc">
+                                <h3 className="text-2xl md:text-4xl text-center">Phase 1</h3>
+                                <ul className="list-disc text-sm md:text-base">
                                     <li>
                                         Create Metamortals' web functionalities
                                     </li>
@@ -46,11 +46,11 @@ export default function Roadmap() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="h-[450px] w-[700px] relative">
+                        <div className="h-[400px] w-[400px] md:h-[450px] md:w-[700px] relative">
                             <img src={scroll} className="w-full h-full" alt="" />
                             <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 space-y-4">
-                                <h3 className="text-4xl text-center">Phase 2</h3>
-                                <ul className="list-disc">
+                                <h3 className="text-2xl md:text-4xl text-center">Phase 2</h3>
+                                <ul className="list-disc text-sm md:text-base">
                                     <li>
                                         Announce partnerships
                                     </li>
@@ -73,11 +73,11 @@ export default function Roadmap() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="h-[500px] w-[700px] relative">
+                        <div className="h-[400px] w-[400px] md:h-[500px] md:w-[700px] relative">
                             <img src={scroll} className="w-full h-full" alt="" />
                             <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 space-y-4">
-                                <h3 className="text-4xl text-center">Phase 3</h3>
-                                <ul className="list-disc">
+                                <h3 className="text-2xl md:text-4xl text-center">Phase 3</h3>
+                                <ul className="list-disc text-sm md:text-base">
                                     <li>
                                         Staking Rewards Platform
                                     </li>
@@ -109,7 +109,7 @@ export default function Roadmap() {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
 
             </div>
         </section>
