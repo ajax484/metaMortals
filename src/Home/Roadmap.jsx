@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { pillars1, pillars2, scroll } from '../Assets/Img'
 
 export default function Roadmap() {
+    const [slideX, setSlideX] = useState(0);
+
+    useEffect(() => {
+        if(window.innerWidth < 768) return;
+
+        const sliderInt = setInterval(() => {
+            console.log(slideX);
+            setSlideX(prevState => prevState === 2 ? 0 : prevState + 1);
+        }, 3000);
+
+        return () => {
+            clearInterval(sliderInt);
+        };
+    }, [slideX]);
+
     return (
         <section className="relative bg-gray-800">
             <img src={pillars1} className="h-full absolute left-0" alt="" />
@@ -12,8 +27,11 @@ export default function Roadmap() {
                     Metamortals: Our Roadmap
                 </h2>
 
-                <div className="overflow-x-scroll overflow-y-auto no-scrollbar text-black max-w-full">
-                    <div className="flex flex-col items-center md:items-start md:flex-row gap-y-8 md:gap-y-0 md:gap-x-16 w-full md:w-max">
+                <div className="overflow-x-hidden overflow-y-auto no-scrollbar text-black max-w-full">
+                    <div
+                        className="flex flex-col items-center md:items-start md:flex-row gap-y-8 md:gap-y-0 md:gap-x-16 transition-transform duration-300 w-full md:w-max"
+                        style={{ transform: `translateX(-${25 * slideX}%)` }}
+                    >
                         <div className="h-[400px] w-[400px] md:h-[400px] md:w-[700px] relative">
                             <img src={scroll} className="w-full h-full" alt="" />
                             <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 space-y-4">
